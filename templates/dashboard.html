@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="text-gray-700 body-font">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+            CRM Dashboard
+        </h1>
+    
+        <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{ total_lead_count }}</h2>
+                <p class="leading-relaxed">Total Leads</p>
+                </div>
+            </div>
+            <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{ total_in_past30 }}</h2>
+                <p class="leading-relaxed">Leads added in last 30 days</p>
+                </div>
+            </div>
+            <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+                <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+                <h2 class="title-font font-medium text-3xl text-gray-900">{{ converted_in_past30 }}</h2>
+                <p class="leading-relaxed">Converted in last 30 days</p>
+                </div>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+</section>
+{% endblock content %}
